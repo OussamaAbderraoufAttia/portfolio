@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64px" height="64px">
+    <!-- Define a linear gradient for the wave effect -->
+    <defs>
+        <linearGradient id="discord-wave" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#7289da"/>
+            <stop offset="100%" stop-color="#5865f2"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- Path for the wave pattern -->
+    <path fill="url(#discord-wave)" d="M32,0 L64,64 Q64,96 32,128 L0,64 Q0,96 32,128 Z"/>
+    
+    <!-- Text for the "D" -->
+    <text font-size="48" fill="#ffffff" text-anchor="middle" dominant-baseline="central">D</text>
+</svg>

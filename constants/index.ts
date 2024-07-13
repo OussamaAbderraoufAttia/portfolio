@@ -73,7 +73,7 @@ export const Socials = [
   {
     name: "Instagram",
     src: "/instagram.svg",
-    link: "https://www.instagram.com/ash_fahim/",
+    link: "https://www.instagram.com/ooouussaammaaa/",
   },
   {
     name: "Discord",

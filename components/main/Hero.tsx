@@ -13,7 +13,10 @@ const Hero = () => {
       >
         <source src="/blackhole.webm" type="video/webm" />
       </video>
+      
+      <div className="flex flex-col ">
       <LandingPage />
+      </div>
       <HeroContent />
     </div>
   );

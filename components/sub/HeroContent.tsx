@@ -10,8 +10,17 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
+
+
+
+
+
+
+
+
+
 const copyToClipboard = () => {
-  const email = "fahimashiqurrahman@gmail.com";
+  const email = "lo_attia@esi.dz";
   navigator.clipboard
     .writeText(email)
     .then(() => {
@@ -36,7 +45,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[20px] font-semibold">
-            Ashiqur Rhaman Fahim
+            Oussama Abderraouf ATTIA
           </h1>
         </motion.div>
 
