@@ -12,48 +12,38 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/projects/4shadi.png"
-          title="4shadi"
-          description="4Shadi is a marriage match making platform for divorcee's and married people. Python,FastAPI,MicroService, mongoDB,MySQL,Nextjs14-TypeScript"
-          demoLink=""
-          sourceLink="https://github.com/Eddie2111/4Shadi"
+          src= "/portfolioBackground.jpg"
+          title="My FIRST ever Personal Portfolio"
+          description="This is my first ever personal portfolio website. It is built with Next.js, Tailwind CSS, and ReactJS."
+          sourceLink="https://github.com/OussamaAbderraoufAttia/Portfolio-Website"
         />
         <ProjectCard
-          src="/projects/carshop.png"
-          title="Vehicle Accessories Inventory Shop"
-          description="The project is built using the Laravel framework and is designed to cater to both users and administrators."
-          demoLink="https://demo1.fusan.live/"
-          sourceLink="https://github.com/AshFahim/Vehicle-Accessories-Inventory-Shop"
+          src="/DrManagerBackground.png"
+          title="Dr.Manager - Binary Image Segmentation"
+          description="A fully designed and developed and deployed during TC - ETIC - 2024: Tracking Doctor's appointments and managing patient's data and doing smart diagnostic using AI."
+          sourceLink="https://github.com/OussamaAbderraoufAttia/bisbackend"
         />
         <ProjectCard
-          src="/projects/ghewmeew.png"
-          title="GhewMew"
-          description=" A pet adoption website where you can adopt pets and also donate to the organization. Built with Python, FastAPI, MySQL, and React.js."
-          demoLink="https://demo-link-3.com"
-          sourceLink="https://source-link-3.com"
+          src="/AlgeriaCoinClassification.png"
+          title="Algeria Coin Classifier"
+          description="An image classification model designed to identify and categorize Algerian coins using convolutional neural networks. In the first of its own, this model classifies Algerian coins with an accuracy of 87.5%."
+         
+          sourceLink="https://github.com/OussamaAbderraoufAttia/AlgerianCoinClassifier"
         />
       </div>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10 justify-center">
         <ProjectCard
-          src="/projects/beeppay.png"
-          title="BeepPay"
-          description="It was a prototype app for a startup. It was built with Flutter and Firebase."
-          demoLink="https://demo-link-3.com"
-          sourceLink="https://source-link-3.com"
+          src="/DocScribe.png"
+          title="Doc Talents Website"
+          description="A website that has been developed for the management of the registrations and the re-registrations of the doctoral students made with MERN Stack."
+          sourceLink="https://github.com/Imeneallouche/Doc-Talents-Website"
         />
         <ProjectCard
-          src="/projects/fabric.png"
-          title="Company Register on HyperLedger Fabric"
-          description="Made a company register on HyperLedger Fabric,CockroachDB and forntend with Html, CSS, and JavaScript."
-          demoLink="https://demo-link-3.com"
-          sourceLink="https://github.com/AshFahim/Company-Register-on-HyperLedger-Fabric"
-        />
-        <ProjectCard
-          src="/projects/furni.png"
-          title="Furnicraft"
-          description="A responsive furniture e-commerce portfolio website built with HTML, CSS, JavaScript, and Bootstrap."
-          demoLink="https://www.furnicraftbd.com/"
-          sourceLink="https://github.com/AshFahim/furnicraft_web"
+          src="/EcommerceApp.png"
+          title="Ecommerce App"
+          description="full-stack eCommerce app using Flutter & Firebase made with Flutter, Dart, and Firebase."  
+          
+          sourceLink="https://github.com/OussamaAbderraoufAttia/ecommerce_app"
         />
       </div>
     </div>

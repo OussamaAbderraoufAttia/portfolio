@@ -9,7 +9,6 @@ interface Props {
   src: string;
   title: string;
   description: string;
-  demoLink: string;
   sourceLink: string;
 }
 
@@ -17,7 +16,6 @@ const ProjectCard = ({
   src,
   title,
   description,
-  demoLink,
   sourceLink,
 }: Props) => {
   return (
@@ -41,16 +39,7 @@ const ProjectCard = ({
         <p className="mt-2 text-gray-300">{description}</p>
         <div className="flex space-x-4 mt-4">
           <motion.a
-            variants={slideInFromLeft(1)}
-            className="p-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-            href={demoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            &nbsp;Demo
-          </motion.a>
-          <motion.a
-            variants={slideInFromLeft(1.2)}
+            variants={slideInFromLeft(1.2)} // Adjusted animation variant
             initial="hidden"
             animate="visible"
             href={sourceLink}

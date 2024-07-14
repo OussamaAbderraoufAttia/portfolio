@@ -1,4 +1,12 @@
 import { link } from "fs";
+// import portfolioBackground EcommerceApp DocScribe AlgeriaCoinClassification DrManagerBackground
+import portfolioBackground from "../public/portfolioBackground.jpg";
+import EcommerceApp from "../public/EcommerceApp.png";
+import DocScribe from "../public/DocScribe.png";
+import AlgeriaCoinClassification from "../public/AlgeriaCoinClassification.png";
+import DrManagerBackground from "../public/DrManagerBackground.png";
+
+
 
 export const Language = [
   {
@@ -48,12 +56,6 @@ export const Language = [
     Image: "/language/verilog.png",
     width: 80,
     height: 80,
-  },
-  {
-    skill_name: "Go",
-    Image: "/language/go.png",
-    width: 50,
-    height: 50,
   },
   {
     skill_name: "Css",
@@ -165,24 +167,6 @@ export const Backend_skill = [
     width: 70,
     height: 70,
   },
-  {
-    skill_name: "Hyperledger fabric",
-    Image: "/lib/fabric.png",
-    width: 100,
-    height: 70,
-  },
-  {
-    skill_name: "Hyperledger aries",
-    Image: "/lib/aries2.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Laravel",
-    Image: "/lib/laravel.svg",
-    width: 70,
-    height: 70,
-  },
 ];
 
 export const Database = [
@@ -236,20 +220,74 @@ export const Tools = [
     width: 70,
     height: 70,
   },
-
-  {
-    skill_name: "Vim",
-    Image: "/tool/vim2.png",
-    width: 50,
-    height: 50,
-  },
 ];
 
 export const Other_skill = [
+
+];
+
+export const projects = [
   {
-    skill_name: "Go",
-    Image: "/go.png",
-    width: 60,
-    height: 60,
+    name: "My Personal Portfolio",
+    description:
+      "A digital showcase of my professional journey, skills, and accomplishments.",
+    tags: [
+      { name: "Javascript", color: "blue-text-gradient" },
+      { name: "HTML", color: "green-text-gradient" },
+      { name: "Tailwind", color: "pink-text-gradient" },
+      { name: "A fully designed and developed by me website", color: "yellow-text-gradient" },
+    ],
+    image: portfolioBackground,
+    source_code_link: "https://github.com/OussamaAbderraoufAttia/Portfolio-Website",
   },
+  {
+    name: "Dr.Manager - Binary Image Segmentation",
+    description:
+      "Tracking Doctor's appointments and managing patient's data and doing smart diagnostic using AI.",
+    tags: [
+      { name: "Flask", color: "blue-text-gradient" },
+      { name: "Computer Vision", color: "green-text-gradient" },
+      { name: "U-net", color: "pink-text-gradient" },
+      { name: "A fully designed and developed and deployed during TC - ETIC - 2024", color: "yellow-text-gradient" },
+    ],
+    image: DrManagerBackground,
+    source_code_link: "https://github.com/OussamaAbderraoufAttia/bisbackend",
+  },
+  {
+    name: "Algeria Coin Classifier",
+    description:
+    "An image classification model designed to identify and categorize Algerian coins using convolutional neural networks. In the first of its own, this model classifies Algerian coins with an accuracy of 87.5%.",
+    tags: [
+      { name: "Machine Learning", color: "blue-text-gradient" },
+      { name: "CNN", color: "green-text-gradient" },
+      { name: "OpenCV", color: "pink-text-gradient" },
+    ],
+    image: AlgeriaCoinClassification,
+    source_code_link:
+      "https://github.com/OussamaAbderraoufAttia/AlgerianCoinClassifier",
+  },
+  {
+    name: "Doc Talents Website",
+    description:
+      "A website that has been developed for the management of the registrations and the re-registrations of the doctoral students",
+    tags: [
+      { name: "MERN Stack", color: "blue-text-gradient" },
+    ],
+    image: DocScribe,
+    source_code_link: "https://github.com/Imeneallouche/Doc-Talents-Website",
+  },
+  {
+    name: "Ecommerce App",
+    description:
+      "full-stack eCommerce app using Flutter & Firebase",
+    tags: [
+      { name: "Flutter", color: "blue-text-gradient" },
+      { name: "Dart", color: "green-text-gradient" },
+      { name: "Firebase", color: "pink-text-gradient" },
+    ],
+    image: EcommerceApp,
+    source_code_link: "https://github.com/OussamaAbderraoufAttia/ecommerce_app",
+  },
+  
+    
 ];

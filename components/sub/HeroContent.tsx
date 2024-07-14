@@ -68,39 +68,31 @@ const HeroContent = () => {
             variants={slideInFromLeft(0.8)}
             className="text-lg text-gray-400 my-5 max-w-[600px]"
           >
-            I&apos;m a passionate Computer Science and Engineering student in my
-            final semester with a solid background in backend and blockchain
-            development. I have a fundamental knowledge of software design,
-            development, testing, and have worked on various efficient and
-            scalable mobile and web applications. I am interested in building
-            and collaborating on innovative projects.
+            I&apos;m a Computer Science student at 
+            ESI (The Higher National School of Computer Science Algiers) 
+            and multilingual speaker with a passion for artificial intelligence, 
+            and neural language processing, computer vision and UX/UI Design 
+            I am looking to join a company that values innovation, collaboration, 
+            and continuous learning and am confident that my enthusiasm and drive will 
+            help me succeed in any role that leverages my passion for technology.
           </motion.p>
 
           <div className="flex flex-wrap gap-4">
             <motion.a
               variants={slideInFromLeft(1)}
               className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-              href="https://drive.usercontent.google.com/download?id=1ap2Y1bTMdn8kDodRHyjm6jv18KMjL8uD&export=download"
+              href="https://drive.google.com/file/d/1WeHR-sPqeZHGi3y1qQy-EFfdDWj6-o8W"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaDownload className="h-4 w-4 inline" />
               &nbsp;Resume
             </motion.a>
-            <motion.a
-              variants={slideInFromLeft(1.2)}
-              initial="hidden"
-              animate="visible"
-              className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-              onClick={copyToClipboard}
-            >
-              <FaMailBulk className="h-4 w-4 inline" />
-              &nbsp;Email
-            </motion.a>
+            
             <motion.a
               variants={slideInFromLeft(1.4)}
               className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-              href="https://www.linkedin.com/in/ash-fahim/"
+              href="https://www.linkedin.com/in/oussama-abderraouf-attia-494b32225/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -110,7 +102,7 @@ const HeroContent = () => {
             <motion.a
               variants={slideInFromLeft(1.6)}
               className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-              href="https://github.com/AshFahim"
+              href="https://github.com/OussamaAbderraoufAttia"
               target="_blank"
               rel="noopener noreferrer"
             >
