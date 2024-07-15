@@ -12,6 +12,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types" // Ensure this path matches where you placed the custom .d.ts file
+    ],
     "plugins": [
       {
         "name": "next"

@@ -74,3 +74,29 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* global.css or any other CSS file */
+/* Ensure the vertical line is always centered and reaches the full height */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+;}
+
+.left-1/2 {
+  left: 50%;
+}
+
+.transform {
+  transform: translateX(-50%);
+}
+
+.border-l-2 {
+  border-left-width: 2px;
+}
+
+.border-gray-700 {
+  border-color: #4a5568; /* Customize the color if needed */
+}

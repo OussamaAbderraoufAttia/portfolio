@@ -5,7 +5,9 @@ import EcommerceApp from "../public/EcommerceApp.png";
 import DocScribe from "../public/DocScribe.png";
 import AlgeriaCoinClassification from "../public/AlgeriaCoinClassification.png";
 import DrManagerBackground from "../public/DrManagerBackground.png";
-
+import soai_logo from "../public/soai_logo.png";
+import gdg_logo from "../public/gdg_logo.png";
+import cse_logo from "../public/cse_logo.png";
 
 
 export const Language = [
@@ -290,4 +292,75 @@ export const projects = [
   },
   
     
+];
+
+
+
+export const experiences = [
+  {
+    title: "SOAI Events Deparmtment Manager",
+    company_name: "School of AI Club  | Algiers Chapter | Algeria",
+    icon: soai_logo,
+    iconBg: "#161329",
+    date: "Sep 2022 - Oct 2023",
+    points: [
+      "Coordinated logistics for various events including workshops, seminars, and conferences, ensuring smooth operations and timely execution.",
+      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
+      "Collaborated with team members to develop innovative solutions for logistical challenges, resulting in improved event experiences."
+    ],
+  },
+  {
+    title: "GDG Algiers Logistics Co-manager",
+    company_name: "Google Developers Group Club | Algeria Chapter | Algeria",
+    icon: gdg_logo,
+    iconBg: "#161329",
+    date: "July 2023 - Present",
+    points: [
+      "Innovated solutions collaboratively to tackle logistical challenges, enhancing event quality.",
+      "Acquired practical skills in MERN Stack development, including React, Node.js, and MongoDB, through hands-on projects and workshops.",
+      "Guided a team of 10+ members in executing logistics for various events, ensuring seamless operations and timely execution.",
+    ],
+  },
+  {
+    title: "CSE Club Member",
+    company_name: "Club Scientifique de l'ESI | ESI Alger | Algiers",
+    icon: cse_logo,
+    iconBg: "#161329",
+    date: "Nov 2021 - Present",
+    points: [
+      "Developing a fully functional mobile application using Flutter, Firebase, and Google Cloud Platform, gaining hands-on experience in app development.",
+      "Leading a team of 6 members in brainstorming and implementing innovative solutions for technical challenges including innovating a visual identity and a responsive web app.",
+      "Doing my first ever workshop on the basics of Pascal, teaching 20+ students the fundamentals of programming and problem-solving and algorithmic thinking.",
+      "Participated in various hackathons and coding competitions, honing my problem-solving skills and gaining experience in working under pressure like Datahack."
+    ],
+  },
+];
+
+export const testimonials = [
+  {
+    photo: '/anonymous.png',
+    fullName: 'Berkat Cheraz Ichrek',
+    role: 'Member, GDG Algiers and student at ESI Algiers',
+    testimonial: `Oussama is literally the best! Always there to help and guide us, his support meant everything to our team. He truly made our season unforgettable. Logistiquement✨️`,
+  },
+  {
+    photo: '/anonymous.png',
+    fullName: 'Amina Bouzid',
+    role: 'Member, SOAI Algiers and student at ESI Algiers',
+    testimonial: `Oussama is a great leader and a great team player. He is always there to help and guide us. He has a great sense of responsibility and is always ready to take on new challenges. He is a great asset to our team. I am glad to have him as a team member.`,
+  },
+  {
+    photo: '/anonymous.png',
+    fullName: 'Mostefai Mounir Sofiane',
+    role: 'Member, GDG Algiers and student at ESI Algiers',
+    testimonial: `Oussama is a great team player and a great leader. He is always there to help and guide us. He has a great sense of responsibility and is always ready to take on new challenges. He is a great asset to our team. I am glad to have him as a team member.`,
+  },
+  {
+    photo: '/anonymous.png',
+    fullName: 'Sofiane Bouzid',
+    role: 'Member, SOAI Algiers and student at ESI Algiers',
+    testimonial: `Oussama is a great team player and a great leader. He is always there to help and guide us. He has a great sense of responsibility and is always ready to take on new challenges. He is a great asset to our team. I am glad to have him as a team member.`,
+  },
+  
+  // Add more testimonials as needed
 ];
