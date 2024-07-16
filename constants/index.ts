@@ -341,7 +341,7 @@ export const testimonials = [
     photo: '/anonymous.png',
     fullName: 'Berkat Cheraz Ichrek',
     role: 'Member, GDG Algiers and student at ESI Algiers',
-    testimonial: `Oussama is literally the best! Always there to help and guide us, his support meant everything to our team. He truly made our season unforgettable. Logistiquement✨️`,
+    testimonial: `Oussama is literally the best! Always there to help and guide us, his support meant everything to our team. He truly made our season unforgettable.\n Logistiquement✨️`,
   },
   {
     photo: '/anonymous.png',
