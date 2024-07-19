@@ -4,6 +4,7 @@ import Skills from "@/components/main/Skills";
 import Projects from "@/components/main/Projects";
 import Experience from "@/components/main/Experience";
 import Testimonials from "@/components/main/Testimonials";
+import ChatbotResponse from "@/components/Chatbot/ChatbotResponse";
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -18,6 +19,7 @@ export default function Home() {
         <Projects />
         <Experience />
         <Testimonials />
+        <ChatbotResponse /> 
       </div>
     </main>
   );

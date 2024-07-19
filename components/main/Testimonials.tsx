@@ -15,6 +15,11 @@ const Testimonials: React.FC = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
+  // Convert newlines to <br /> tags for rendering
+  const formatTestimonial = (text: string) => {
+    return text.replace(/\n/g, '<br />');
+  };
+
   return (
     <div className="py-10">
       <div className="max-w-screen-lg mx-auto">
@@ -30,7 +35,7 @@ const Testimonials: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative bg-gray-800 rounded-lg p-6 shadow-lg ml-8 mr-8"
+          className="relative bg-gray-800 rounded-lg p-6 shadow-lg ml-8 mr-8 md:ml-0 md:mr-0"
         >
           <div className="flex items-center mb-4">
             <img
@@ -50,9 +55,8 @@ const Testimonials: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-300 text-lg"
-          >
-            {testimonials[currentIndex]?.testimonial || 'Testimonial text'}
-          </motion.p>
+            dangerouslySetInnerHTML={{ __html: formatTestimonial(testimonials[currentIndex]?.testimonial || 'Testimonial text') }}
+          />
           <div className="flex justify-between mt-6">
             <button
               onClick={handlePrev}
