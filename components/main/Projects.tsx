@@ -7,12 +7,12 @@ const Projects = () => {
       className="flex flex-col items-center justify-center py-20"
       id="projects"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10">
         My Projects
       </h1>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+      <div className="flex flex-wrap justify-center gap-10 w-full px-10">
         <ProjectCard
-          src= "/portfolioBackground.jpg"
+          src="/portfolioBackground.jpg"
           title="My FIRST ever Personal Portfolio"
           description="This is my first ever personal portfolio website. It is built with Next.js, Tailwind CSS, and ReactJS."
           sourceLink="https://github.com/OussamaAbderraoufAttia/Portfolio-Website"
@@ -27,11 +27,8 @@ const Projects = () => {
           src="/AlgeriaCoinClassification.png"
           title="Algeria Coin Classifier"
           description="An image classification model designed to identify and categorize Algerian coins using convolutional neural networks. In the first of its own, this model classifies Algerian coins with an accuracy of 87.5%."
-         
           sourceLink="https://github.com/OussamaAbderraoufAttia/AlgerianCoinClassifier"
         />
-      </div>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10 justify-center">
         <ProjectCard
           src="/DocScribe.png"
           title="Doc Talents Website"
@@ -42,7 +39,6 @@ const Projects = () => {
           src="/EcommerceApp.png"
           title="Ecommerce App"
           description="full-stack eCommerce app using Flutter & Firebase made with Flutter, Dart, and Firebase."  
-          
           sourceLink="https://github.com/OussamaAbderraoufAttia/ecommerce_app"
         />
       </div>

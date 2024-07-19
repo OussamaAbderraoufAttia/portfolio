@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+// src/app/layout.tsx
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
@@ -7,7 +8,7 @@ import Footer from "@/components/main/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Oussama Abderraouf ATTIA - Portfolio",
   description: "This is my second version of my portfolio website in which I used Next.js, Tailwind CSS, and Framer Motion. I hope you like it! ",
 };
@@ -22,9 +23,13 @@ export default function RootLayout({
       <body className={`${inter.className} bg-[#030018] overflow-y-scroll overflow-x-hidden`}>
         <StarsCanvas />
         <Navbar />
-        {children}
+        <main>
+          {children}
+          {/* If you want to test SimpleTest separately, include it here */}
+          
+        </main>
         <Footer />
-      </body>
+      </body> 
     </html>
   );
 }

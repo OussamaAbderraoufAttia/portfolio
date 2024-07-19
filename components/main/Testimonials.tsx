@@ -1,43 +1,86 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { testimonials } from '@/constants';
 
 const Testimonials: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
   return (
     <div className="py-10">
       <div className="max-w-screen-lg mx-auto">
-        <h1 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 text-center"
+        >
           Testimonials
-        </h1>
-        <div className="relative">
-          {/* Optional: Vertical line for timeline effect */}
-          {/* <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-8 border-gray-700"></div> */}
-          <div className="mx-auto mt-8 overflow-x-auto">
-            <div className="flex gap-8 pb-4">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={`testimonial-${index}`}
-                  className="flex-shrink-0 w-80 bg-gray-800 rounded-lg p-4 shadow-lg"
-                  style={{ minWidth: '320px' }} // Adjust min-width to prevent collapsing on smaller screens
-                >
-                  <div className="flex items-center mb-4">
-                    <img
-                      src={testimonial.photo}
-                      alt={testimonial.fullName}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div className="ml-3">
-                      <div className="text-lg font-semibold text-white">
-                        {testimonial.fullName}
-                      </div>
-                      <div className="text-gray-400">{testimonial.role}</div>
-                    </div>
-                  </div>
-                  <p className="text-gray-300">{testimonial.testimonial}</p>
-                </div>
-              ))}
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="relative bg-gray-800 rounded-lg p-6 shadow-lg ml-8 mr-8"
+        >
+          <div className="flex items-center mb-4">
+            <img
+              src={testimonials[currentIndex]?.photo || '/placeholder.jpg'}
+              alt={testimonials[currentIndex]?.fullName || 'Testimonial'}
+              className="w-16 h-16 rounded-full object-cover"
+            />
+            <div className="ml-4">
+              <div className="text-xl font-semibold text-white">
+                {testimonials[currentIndex]?.fullName || 'Name'}
+              </div>
+              <div className="text-gray-400 text-sm">{testimonials[currentIndex]?.role || 'Role'}</div>
             </div>
           </div>
-        </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-gray-300 text-lg"
+          >
+            {testimonials[currentIndex]?.testimonial || 'Testimonial text'}
+          </motion.p>
+          <div className="flex justify-between mt-6">
+            <button
+              onClick={handlePrev}
+              className="p-2 bg-[#6b6b6b] text-white rounded-lg shadow-md hover:bg-[#454545] focus:outline-none focus:ring-2 focus:ring-blue-400"
+              style={{ zIndex: 20 }}  // Ensure the button is on top
+            >
+              Prev
+            </button>
+            <button
+              onClick={handleNext}
+              className="p-2 bg-[#6b6b6b] text-white rounded-lg shadow-md hover:bg-[#454545] focus:outline-none focus:ring-2 focus:ring-blue-400"
+              style={{ zIndex: 20 }}  // Ensure the button is on top
+            >
+              Next
+            </button>
+          </div>
+          <div className="flex justify-center mt-4">
+            {testimonials.map((_, index) => (
+              <div
+                key={index}
+                className={`w-3 h-3 rounded-full mx-1 cursor-pointer ${
+                  currentIndex === index ? 'bg-purple-500' : 'bg-gray-400'
+                }`}
+                onClick={() => setCurrentIndex(index)}
+              ></div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );

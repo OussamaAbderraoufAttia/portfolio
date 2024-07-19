@@ -1,10 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'swiper/swiper-bundle.css';
 
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }
+
 .Welcome-text {
   background: linear-gradient(
       0deg,
@@ -17,6 +19,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .Welcome-box {
   isolation: isolate;
   overflow: hidden;
@@ -26,7 +29,6 @@
   border-radius: 32px;
   box-shadow: inset 0 -7px 11px #a48fff1f;
   display: flex;
-
   position: relative;
   width: -moz-max-content;
   width: max-content;
@@ -42,6 +44,7 @@
     rgba(113, 47, 255, 0.12);
   box-shadow: inset 0 0 12px #bf97ff3d;
 }
+
 .button-primary:hover {
   background: linear-gradient(
       180deg,
@@ -62,11 +65,13 @@
   left: 0;
   pointer-events: none;
 }
+
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hidden {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
@@ -85,7 +90,7 @@ html {
   position: absolute;
 }
 
-.left-1/2 {
+.left-half {
   left: 50%;
 }
 
@@ -99,4 +104,86 @@ html {
 
 .border-gray-700 {
   border-color: #4a5568; /* Customize the color if needed */
+}
+
+/* Add this to your global CSS file or within a style block in your component */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white; /* Adjust the color as needed */
+  top: 50%; /* Center the buttons vertically */
+  transform: translateY(-50%);
+}
+
+.swiper-button-next {
+  right: 10px; /* Adjust the right position */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Adjust the left position */
+}
+
+
+.simple-test-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #6b5b95, #c8d7e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.count {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem; /* Rounded corners */
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.decrement-button {
+  background-color: #f56565; /* Red */
+}
+
+.increment-button {
+  background-color: #3182ce; /* Blue */
+}
+
+.button:hover {
+  opacity: 0.8; /* Slight opacity change on hover */
+}
+
+.simple-test-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative; /* Ensure relative positioning to handle z-index */
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  position: relative; /* Ensure buttons are positioned above other elements */
+  z-index: 100; /* Higher z-index to ensure buttons are on top */
 }
