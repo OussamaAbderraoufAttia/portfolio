@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ant-design/react-slick": "^1.1.2",
+    "@google/generative-ai": "^0.15.0",
     "@heroicons/react": "^2.1.3",
     "antd": "^5.19.2",
     "ismobilejs": "^1.1.1",

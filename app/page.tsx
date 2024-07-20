@@ -4,11 +4,12 @@ import Skills from "@/components/main/Skills";
 import Projects from "@/components/main/Projects";
 import Experience from "@/components/main/Experience";
 import Testimonials from "@/components/main/Testimonials";
-import ChatbotResponse from "@/components/Chatbot/ChatbotResponse";
+import ChatbotResponse from "@/components/Chatbot/Chatbot";
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Chatbot from "@/components/Chatbot/Chatbot";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <Projects />
         <Experience />
         <Testimonials />
-        <ChatbotResponse /> 
+        <Chatbot />
       </div>
     </main>
   );
