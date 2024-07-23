@@ -14,12 +14,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full fixed top-0 bg-[#03001418] backdrop-blur-md z-50 px-10">
-      <div className="w-full h-[65px] flex items-center justify-between m-auto px-[10px]">
+    <div className="w-full fixed top-0 bg-[#03001418] backdrop-blur-md z-50 px-4 shadow-[0_10px_30px_rgba(42,14,97,0.5)]">
+      <div className="w-full h-[50px] flex items-center justify-between m-auto px-4">
         {/* Mobile Toggle Button */}
         <div className="flex items-center md:hidden">
           <a href="#about-me" className="flex items-center">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden">
+            <div className="relative w-10 h-10 rounded-full overflow-hidden">
               <Image
                 src={OussamaImage}
                 alt="Oussama's Image"
@@ -28,13 +28,13 @@ const Navbar = () => {
                 className="rounded-full"
               />
             </div>
-            <span className="font-bold ml-2 text-white">Oussama</span>
+            <span className="font-bold ml-2 text-white text-sm">Oussama</span>
           </a>
         </div>
 
         {/* Desktop Profile */}
         <a href="#about-me" className="hidden md:flex items-center">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden">
             <Image
               src={OussamaImage}
               alt="Oussama's Image"
@@ -43,40 +43,28 @@ const Navbar = () => {
               className="rounded-full"
             />
           </div>
-          <span className="font-bold ml-2 text-white hidden md:block">
+          <span className="font-bold ml-2 text-white text-sm hidden md:block">
             Oussama Abderraouf ATTIA
           </span>
         </a>
 
         {/* Desktop Menu Links */}
-        <div className="hidden md:flex items-center justify-between w-[500px] h-full md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-white">
-            <a
-              href="#about-me"
-              className="cursor-pointer nav-link"
-              style={{ color: "#ffffff" }} // White color
-            >
+        <div className="hidden md:flex items-center justify-between w-[375px] h-full md:mr-10">
+          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] px-4 py-2 rounded-full text-white text-sm">
+            <a href="#about-me" className="cursor-pointer nav-link">
               About me
             </a>
-            <a
-              href="#skills"
-              className="cursor-pointer nav-link"
-              style={{ color: "#ffffff" }} // White color
-            >
+            <a href="#skills" className="cursor-pointer nav-link">
               Skills
             </a>
-            <a
-              href="#projects"
-              className="cursor-pointer nav-link"
-              style={{ color: "#ffffff" }} // White color
-            >
+            <a href="#projects" className="cursor-pointer nav-link">
               Projects
             </a>
           </div>
         </div>
 
         {/* Desktop Social Icons */}
-        <div className="hidden md:flex flex-row gap-5">
+        <div className="hidden md:flex flex-row gap-3">
           {Socials.map((social) => (
             <a
               href={social.link}
@@ -87,8 +75,8 @@ const Navbar = () => {
               <Image
                 src={social.src}
                 alt={social.name}
-                width={30}
-                height={30}
+                width={24}
+                height={24}
                 className="rounded-lg"
               />
             </a>
@@ -98,13 +86,13 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="block md:hidden">
           <button
-            className="text-white focus:outline-none w-100 h-100 flex items-center justify-center rounded-lg"
+            className="text-white focus:outline-none w-8 h-8 flex items-center justify-center rounded-lg"
             onClick={toggleMenu}
           >
             {isOpen ? (
-              <Image src={closeIcon} alt="close" width={24} height={24} />
+              <Image src={closeIcon} alt="close" width={20} height={20} />
             ) : (
-              <Image src={menuIcon} alt="menu" width={24} height={24} />
+              <Image src={menuIcon} alt="menu" width={20} height={20} />
             )}
           </button>
         </div>
@@ -116,21 +104,18 @@ const Navbar = () => {
           <a
             href="#about-me"
             className="block text-white font-bold hover:opacity-50"
-            style={{ color: "#ffffff" }} // White color
           >
             About me
           </a>
           <a
             href="#skills"
             className="block text-white font-bold hover:opacity-50"
-            style={{ color: "#ffffff" }} // White color
           >
             Skills
           </a>
           <a
             href="#projects"
             className="block text-white font-bold hover:opacity-50"
-            style={{ color: "#ffffff" }} // White color
           >
             Projects
           </a>
@@ -147,8 +132,8 @@ const Navbar = () => {
                 <Image
                   src={social.src}
                   alt={social.name}
-                  width={30}
-                  height={30}
+                  width={24}
+                  height={24}
                   className="rounded-lg"
                 />
               </a>

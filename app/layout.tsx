@@ -26,7 +26,7 @@ export default function RootLayout({
         <main>
           {children}
           {/* If you want to test SimpleTest separately, include it here */}
-          
+          <StarsCanvas />
         </main>
         <Footer />
       </body> 

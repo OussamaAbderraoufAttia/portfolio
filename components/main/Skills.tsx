@@ -14,12 +14,12 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-0 py-20"
-      style={{ transform: "scale(0.9" }}
+      className="flex flex-col items-center justify-center gap-1 h-full relative overflow-hidden pb-0 py-6" // Further reduced padding and gap
+      style={{ transform: "scale(0.8)", transformOrigin: "top" }} // Adjusted scaling
     >
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center"> {/* Further reduced margin-top and gap */}
         {Language.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -31,7 +31,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center">
         {Backend_skill.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -43,7 +43,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center">
         {Frontend_skill.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -55,7 +55,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center">
         {Tools.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -67,7 +67,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center">
         {Database.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -78,6 +78,7 @@ const Skills = () => {
           />
         ))}
       </div>
+
       <div className="w-full h-full absolute">
         <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
           <video

@@ -22,29 +22,29 @@ const ProjectCard = ({
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col justify-center w-full z-[20] rounded-2xl shadow-lg border border-[#2A0E61] p-4 mb-6 max-w-[400px]" // Adjusted max-width to 400px
+      className="flex flex-col justify-center w-full z-[20] rounded-lg shadow-md border border-[#2A0E61] p-3 mb-4 max-w-[280px]" // Adjusted max-width to 280px
     >
-      <div className="relative rounded-lg overflow-hidden p-2.5">
+      <div className="relative rounded-lg overflow-hidden p-1.5">
         <Image
           src={src}
           alt={title}
-          width={400} // Adjusted width to 400px
-          height={250} // Adjusted height to 250px
+          width={280} // Adjusted width to 280px
+          height={160} // Adjusted height to 160px
           className="w-full object-cover rounded-lg"
         />
       </div>
 
-      <div className="relative p-4 justify-center">
-        <h1 className="text-xl font-semibold text-white">{title}</h1> {/* Adjusted text size to text-xl */}
-        <p className="mt-2 text-gray-300">{description}</p>
-        <div className="flex space-x-4 mt-4">
+      <div className="relative p-3">
+        <h1 className="text-base font-semibold text-white">{title}</h1> {/* Adjusted text size to text-base */}
+        <p className="mt-1 text-gray-300 text-xs">{description}</p> {/* Adjusted text size to text-xs */}
+        <div className="flex space-x-2 mt-3">
           <motion.a
             variants={slideInFromLeft(1.2)} // Adjusted animation variant
             initial="hidden"
             animate="visible"
             href={sourceLink}
             target="_blank"
-            className="p-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+            className="p-1.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[160px]"
           >
             &nbsp;Source Code
           </motion.a>
