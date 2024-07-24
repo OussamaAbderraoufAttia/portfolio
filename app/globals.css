@@ -187,3 +187,20 @@ html {
   position: relative; /* Ensure buttons are positioned above other elements */
   z-index: 100; /* Higher z-index to ensure buttons are on top */
 }
+/* App.css */
+.chat-container::-webkit-scrollbar {
+  width: thin;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: #374151;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-container {
+  scrollbar-width: thin;
+  scrollbar-color: #374151 transparent;
+}

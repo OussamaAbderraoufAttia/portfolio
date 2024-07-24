@@ -129,7 +129,11 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center py-10 px-4">
+    <div
+     className="flex flex-col items-center justify-center py-10 px-4"
+     id="Experience"
+     >
+     
       <h1 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 text-center">
         My Experience
       </h1>

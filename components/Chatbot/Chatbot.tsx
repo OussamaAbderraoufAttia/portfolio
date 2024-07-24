@@ -87,7 +87,7 @@ const Chatbot: React.FC = () => {
     }, [messages]);
 
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen p-4 mb-8">
+        <div className=" flex flex-col justify-center items-center min-h-screen p-4 py-0">
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -96,16 +96,25 @@ const Chatbot: React.FC = () => {
             >
                 Smart Assistant
             </motion.h1>
-            <div className="w-full max-w-4xl p-4 border rounded-lg shadow-lg bg-gray-800 text-white" style={{ zIndex: 10 }}>
+            {/* Adjusted div with background opacity */}
+            <div className=" left-1 w-full max-w-4xl p-4 border rounded-lg shadow-lg text-white" 
+                 style={{ backgroundColor: 'rgba(31, 41, 55, 0.2)', zIndex: 10 }}> {/* Opacity adjusted here */}
                 <div 
                     ref={chatContainerRef} 
-                    className="min-h-32 max-h-96 overflow-y-auto p-4 border border-gray-600 rounded-lg mb-4 bg-gray-900"
+                    className="chat-container min-h-32 max-h-96 overflow-y-auto p-4 border border-gray-600 rounded-lg mb-4 bg-gray-900"
+                    style={{
+                        backgroundColor: 'rgba(17, 24, 39, 0.5)', 
+                        zIndex: 10
+                    }}
                 >
-                    <div className="mb-4 text-center text-gray-400">Hi! I'm Oussama. How can I assist you today?</div>
+                    <div className="mb-4 text-center text-gray-400"
+                        style={{ backgroundColor: 'rgba(17, 24, 39, 0.0)', zIndex: 10 }}
+                    >Hi! I'm Oussama. How can I assist you today?</div>
                     {messages.map((message, index) => (
                         <div 
                             key={index} 
                             className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'} mb-2`}
+                            
                         >
                             <div 
                                 className={`max-w-lg p-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'} ${
@@ -116,7 +125,8 @@ const Chatbot: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <div className="flex items-center bg-[#1d1836] p-2 rounded-lg" style={{ zIndex: 10 }}>
+                {/* Explicitly set z-index for input and button container */}
+                <div className="flex items-center p-2 rounded-lg" style={{ zIndex: 20 }}>
                     <input
                         type="text"
                         value={input}
@@ -135,6 +145,7 @@ const Chatbot: React.FC = () => {
             </div>
         </div>
     );
+    
 };
 
 export default Chatbot;

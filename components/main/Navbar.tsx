@@ -48,17 +48,20 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop Menu Links */}
-        <div className="hidden md:flex items-center justify-between w-[375px] h-full md:mr-10">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] px-4 py-2 rounded-full text-white text-sm">
-            <a href="#about-me" className="cursor-pointer nav-link">
+        {/* Centered Menu Links */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center h-full">
+          <div className="flex items-center justify-center w-auto h-auto border border-[#7042f861] bg-[#0300145e] px-4 py-2 rounded-full text-white text-sm">
+            <a href="#about-me" className="cursor-pointer nav-link mx-4">
               About me
             </a>
-            <a href="#skills" className="cursor-pointer nav-link">
+            <a href="#skills" className="cursor-pointer nav-link mx-4">
               Skills
             </a>
-            <a href="#projects" className="cursor-pointer nav-link">
+            <a href="#projects" className="cursor-pointer nav-link mx-4">
               Projects
+            </a>
+            <a href="#Experience" className="cursor-pointer nav-link mx-4">
+              Experience
             </a>
           </div>
         </div>
@@ -118,6 +121,12 @@ const Navbar = () => {
             className="block text-white font-bold hover:opacity-50"
           >
             Projects
+          </a>
+          <a
+            href="#Experience"
+            className="block text-white font-bold hover:opacity-50"
+          >
+            Experience
           </a>
           {/* Social Icons for Mobile */}
           <div className="flex flex-row gap-2 md:hidden">

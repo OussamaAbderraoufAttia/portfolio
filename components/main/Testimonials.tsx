@@ -21,7 +21,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="py-10">
+    <div className="py-0">
       <div className="max-w-screen-lg mx-auto px-4">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -35,7 +35,7 @@ const Testimonials: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative bg-gray-800 rounded-lg p-6 shadow-lg"
+          className="relative bg-gray-800 bg-opacity-80 rounded-lg p-6 shadow-lg"
         >
           <div className="flex items-center mb-4">
             <img
@@ -57,7 +57,7 @@ const Testimonials: React.FC = () => {
             className="text-gray-300 text-lg"
             dangerouslySetInnerHTML={{ __html: formatTestimonial(testimonials[currentIndex]?.testimonial || 'Testimonial text') }}
           />
-          <div className="flex justify-between mt-6">
+          <div className="flex justify-between mt-6 relative z-20">
             <button
               onClick={handlePrev}
               className="p-2 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"

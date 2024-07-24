@@ -2,7 +2,9 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <form>
+    <form
+      className="flex"
+    >
       <h2 className="text-2xl font-bold mb-5 text-white">
         Email me : fahimashiqurrahman@gmail.com
       </h2>
