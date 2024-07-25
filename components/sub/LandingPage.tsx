@@ -37,7 +37,7 @@ const Typewriter: React.FC<{ texts: string[] }> = ({ texts }) => {
 
 const LandingPage: React.FC = () => {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center">
+    <section className="absolute w-full h-max flex items-center justify-center">
       <div
         className={`max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-center text-center gap-5`}
       >

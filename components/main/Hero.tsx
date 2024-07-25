@@ -1,24 +1,62 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import HeroContent from "../sub/HeroContent";
-import LandingPage from "../sub/LandingPage";
+import { motion } from "framer-motion";
 
-const Hero = () => {
-  return (
-    <div className=" relative flex flex-col h-full w-full">
+// Utility function for detecting mobile devices
+const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
+
+// Animation variants for the video
+const videoVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 0.7, transition: { duration: 1 } },
+};
+
+// Component for mobile view
+const MobileHero = () => (
+  <div className="relative flex flex-col h-full w-full">
+    <div className="relative z-20 flex flex-col items-center justify-center h-full w-full">
+      <HeroContent />
+    </div>
+  </div>
+);
+
+// Component for desktop view
+const DesktopHero = () => (
+  <div className="relative flex flex-col h-full w-full">
+    <motion.div
+      className="absolute top-[-340px] left-0 h-full w-full z-10"
+      variants={videoVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <video
         autoPlay
         loop
         muted
-        className="rotate-180 absolute top-[-340px]  h-full w-full left-0 z-[1] object-cover opacity-[0.7]"
+        className="h-full w-full object-cover"
       >
         <source src="/blackhole.webm" type="video/webm" />
       </video>
-      
-      <div className="flex flex-col ">
-      <LandingPage />
-      </div>
+    </motion.div>
+    <div className="relative z-20 flex flex-col items-center justify-center h-full w-full">
       <HeroContent />
     </div>
+  </div>
+);
+
+// Main Hero component
+const Hero = () => {
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+  useEffect(() => {
+    setIsMobileDevice(isMobile());
+  }, []);
+
+  return (
+    <>
+      {isMobileDevice ? <MobileHero /> : <DesktopHero />}
+    </>
   );
 };
 

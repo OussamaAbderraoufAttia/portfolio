@@ -17,12 +17,8 @@ const Chatbot: React.FC = () => {
     const chatContainerRef = useRef<HTMLDivElement>(null);
 
     const formatMessage = (message: string) => {
-        // Replace `\n` with <br />
         let formattedMessage = message.replace(/\n/g, '<br />');
-        
-        // Replace text between `**` with bold
         formattedMessage = formattedMessage.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
         return formattedMessage;
     };
 
@@ -37,18 +33,16 @@ const Chatbot: React.FC = () => {
         try {
             const botMessage = await generateResponse(input);
             setTypingMessage('');
-            setMessages([...newMessages, { sender: 'bot', text: '' }]); // Placeholder for typing effect
+            setMessages([...newMessages, { sender: 'bot', text: '' }]);
 
-            // Typing effect with improved scroll behavior
             const typeMessage = async (message: string) => {
-                let speed = 1; // Faster typing speed
+                let speed = 1;
                 let lastScrollPosition = 0;
 
                 for (let i = 0; i < message.length; i++) {
                     setTypingMessage(message.slice(0, i + 1));
                     await new Promise((resolve) => setTimeout(resolve, speed));
 
-                    // Update scroll position after each whitespace character
                     if (message[i] === ' ' || i === message.length - 1) {
                         lastScrollPosition = chatContainerRef.current?.scrollHeight ?? 0;
                         scrollToBottom();
@@ -87,7 +81,7 @@ const Chatbot: React.FC = () => {
     }, [messages]);
 
     return (
-        <div className=" flex flex-col justify-center items-center min-h-screen p-4 py-0">
+        <div className="flex flex-col justify-center items-center min-h-screen p-4 py-0">
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -96,9 +90,9 @@ const Chatbot: React.FC = () => {
             >
                 Smart Assistant
             </motion.h1>
-            {/* Adjusted div with background opacity */}
-            <div className=" left-1 w-full max-w-4xl p-4 border rounded-lg shadow-lg text-white" 
-                 style={{ backgroundColor: 'rgba(31, 41, 55, 0.2)', zIndex: 10 }}> {/* Opacity adjusted here */}
+            <div className='w-full max-w-4xl flex flex-row justify-center'>
+            <div className=" justify-center w-full max-w-4xl p-4 border rounded-lg shadow-lg text-white" 
+                 style={{ backgroundColor: 'rgba(31, 41, 55, 0.2)', zIndex: 10 }}>
                 <div 
                     ref={chatContainerRef} 
                     className="chat-container min-h-32 max-h-96 overflow-y-auto p-4 border border-gray-600 rounded-lg mb-4 bg-gray-900"
@@ -114,7 +108,6 @@ const Chatbot: React.FC = () => {
                         <div 
                             key={index} 
                             className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'} mb-2`}
-                            
                         >
                             <div 
                                 className={`max-w-lg p-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'} ${
@@ -125,13 +118,12 @@ const Chatbot: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                {/* Explicitly set z-index for input and button container */}
-                <div className="flex items-center p-2 rounded-lg" style={{ zIndex: 20 }}>
+                <div className="flex flex-row items-center p-2 rounded-lg">
                     <input
                         type="text"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
-                        className="flex-1 p-2 rounded-lg border border-gray-600 bg-gray-900 text-white mr-2"
+                        className="w-full flex-1 p-2 rounded-lg border border-gray-600 bg-gray-900 text-white mr-2"
                         placeholder="Type your message..."
                         onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                     />
@@ -143,9 +135,9 @@ const Chatbot: React.FC = () => {
                     </button>
                 </div>
             </div>
+            </div>
         </div>
     );
-    
 };
 
 export default Chatbot;
