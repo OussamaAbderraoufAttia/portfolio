@@ -9,6 +9,8 @@ import soai_logo from "../public/soai_logo.png";
 import gdg_logo from "../public/gdg_logo.png";
 import cse_logo from "../public/cse_logo.png";
 
+import { IconType } from 'react-icons/lib';
+
 
 export const Language = [
   {
@@ -364,3 +366,48 @@ export const testimonials = [
   
   // Add more testimonials as needed
 ];
+
+
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from 'react-icons/fa6';
+
+interface Socials {
+  name: string;
+  url: string;
+  icon: IconType;
+}
+
+const socials: Socials[] = [
+  {
+      name: 'Facebook',
+      url: 'https://facebook.com/maulism',
+      icon: FaFacebook,
+  },
+  {
+      name: 'Instagram',
+      url: 'https://instagram.com/maulaanaahmad',
+      icon: FaInstagram,
+  },
+  {
+      name: 'Github',
+      url: 'https://github.com/bymaul/',
+      icon: FaGithub,
+  },
+  {
+      name: 'LinkedIn',
+      url: 'https://linkedin.com/in/maulana-ahmad',
+      icon: FaLinkedin,
+  },
+  {
+      name: 'YouTube',
+      url: 'https://youtube.com/@maulx',
+      icon: FaYoutube,
+  },
+];
+
+export default socials;
