@@ -2,7 +2,11 @@
 
 import React, { useState, useRef, ChangeEvent, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
-import Location from "./Location";
+import Location from "../sub/Location";
+import SocialMedia from '../sub/SocialMedia';
+
+
+
 
 interface InputFieldProps {
   label: string;
@@ -159,6 +163,7 @@ const Contact: React.FC = () => {
             <div className="md:w-1/2 flex items-center justify-center">
               <div className=" rounded-lg shadow-lg p-2">
                 <Location />
+                <SocialMedia />
               </div>
             </div>
           </div>
