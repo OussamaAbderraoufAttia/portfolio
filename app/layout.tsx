@@ -5,14 +5,14 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-
+import favicon from "@/app/favicon.ico";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Oussama Abderraouf ATTIA - Portfolio",
   description: "This is my second version of my portfolio website in which I used Next.js, Tailwind CSS, and Framer Motion. I hope you like it!",
   icons: {
-    icon: "/icons/IconBitmoji.ico",  // Adjust the path based on your directory structure
+    icon: {favicon},  // Adjust the path based on your directory structure
   },
 };
 

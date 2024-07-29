@@ -9,9 +9,9 @@ import {
 import Contact from "./Contact";
 import { FaDiscord, FaLinkedin, FaMailBulk, FaYoutube } from "react-icons/fa";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px]">
+    <div className="w-full bg-transparent text-gray-200 shadow-lg p-[15px]">
       <Contact />
     </div>
   );

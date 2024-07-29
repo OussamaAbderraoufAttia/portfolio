@@ -82,9 +82,9 @@ export const Socials = [
     link: "https://www.instagram.com/ooouussaammaaa/",
   },
   {
-    name: "Discord",
+    name: "Linkedin",
     src: "/linkedin.svg",
-    link: "https://discord.gg/963VBZUvCb",
+    link: "https://www.linkedin.com/in/oussama-abderraouf-attia-494b32225/",
   },
 ];
 
@@ -362,6 +362,12 @@ export const testimonials = [
     fullName: 'Sofiane Bouzid',
     role: 'Member, SOAI Algiers and student at ESI Algiers',
     testimonial: `Oussama is a great team player and a great leader. He is always there to help and guide us. He has a great sense of responsibility and is always ready to take on new challenges. He is a great asset to our team. I am glad to have him as a team member.`,
+  },
+  {
+    photo: '/anonymous.png',
+    fullName: 'Abdeldjalil Lamara',
+    role: 'Ai and data engineering enthusiast, Gdg member and usthb student & Graphic designer.',
+    testimonial: `I have had the pleasure of working with Oussama, and I can confidently say he is one of the best colleagues I have ever worked with. His strong communication, organization, and technical skills make him an invaluable asset to any team.\nOussama is hardworking, motivated, and dedicated, consistently delivering high-quality results. His ability to effectively collaborate and drive projects forward is unparalleled. I would always want Oussama on my team and highly recommend him for any professional endeavor.`,
   },
   
   // Add more testimonials as needed
