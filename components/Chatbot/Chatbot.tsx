@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { generateResponse } from './chatbotService';
+import Image from 'next/image'; // Importing the Next.js Image component
 
 type Message = {
     sender: 'user' | 'bot';
@@ -19,6 +20,10 @@ const Chatbot: React.FC = () => {
     const formatMessage = (message: string) => {
         let formattedMessage = message.replace(/\n/g, '<br />');
         formattedMessage = formattedMessage.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        // Handle <img> tags in messages and replace them with <Image />
+        formattedMessage = formattedMessage.replace(/<img src="(.*?)" alt="(.*?)" \/>/g, (match, src, alt) => {
+            return `<div style="width: 100%; height: auto;"><Image src="${src}" alt="${alt}" width={500} height={300} /></div>`;
+        });
         return formattedMessage;
     };
 
@@ -91,50 +96,52 @@ const Chatbot: React.FC = () => {
                 Smart Assistant
             </motion.h1>
             <div className='w-full max-w-4xl flex flex-row justify-center'>
-            <div className=" justify-center w-full max-w-4xl p-4 border rounded-lg shadow-lg text-white" 
-                 style={{ backgroundColor: 'rgba(31, 41, 55, 0.2)', zIndex: 10 }}>
-                <div 
-                    ref={chatContainerRef} 
-                    className="chat-container min-h-32 max-h-96 overflow-y-auto p-4 border border-gray-600 rounded-lg mb-4 bg-gray-900"
-                    style={{
-                        backgroundColor: 'rgba(17, 24, 39, 0.5)', 
-                        zIndex: 10
-                    }}
-                >
-                    <div className="mb-4 text-center text-gray-400"
-                        style={{ backgroundColor: 'rgba(17, 24, 39, 0.0)', zIndex: 10 }}
-                    >Hi! I'm Oussama. How can I assist you today?</div>
-                    {messages.map((message, index) => (
-                        <div 
-                            key={index} 
-                            className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'} mb-2`}
-                        >
-                            <div 
-                                className={`max-w-lg p-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'} ${
-                                    message.sender === 'bot' && typingMessage && message.text === '' ? 'whitespace-pre-line' : ''
-                                }`}
-                                dangerouslySetInnerHTML={{ __html: message.sender === 'bot' && typingMessage && message.text === '' ? typingMessage : message.text }}
-                            />
-                        </div>
-                    ))}
-                </div>
-                <div className="flex flex-row items-center p-2 rounded-lg">
-                    <input
-                        type="text"
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        className="w-full flex-1 p-2 rounded-lg border border-gray-600 bg-gray-900 text-white mr-2"
-                        placeholder="Type your message..."
-                        onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                    />
-                    <button 
-                        onClick={handleSend} 
-                        className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                <div className="w-full max-w-4xl p-4 border rounded-lg shadow-lg text-white"
+                    style={{ backgroundColor: 'rgba(31, 41, 55, 0.2)', zIndex: 10 }}>
+                    <div
+                        ref={chatContainerRef}
+                        className="chat-container min-h-32 max-h-96 overflow-y-auto p-4 border border-gray-600 rounded-lg mb-4 bg-gray-900"
+                        style={{
+                            backgroundColor: 'rgba(17, 24, 39, 0.5)',
+                            zIndex: 10
+                        }}
                     >
-                        Send
-                    </button>
+                        <div className="mb-4 text-center text-gray-400"
+                            style={{ backgroundColor: 'rgba(17, 24, 39, 0.0)', zIndex: 10 }}
+                        >
+                            Hi! I&apos;m Oussama. How can I assist you today?
+                        </div>
+                        {messages.map((message, index) => (
+                            <div
+                                key={index}
+                                className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'} mb-2`}
+                            >
+                                <div
+                                    className={`max-w-lg p-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'} ${
+                                        message.sender === 'bot' && typingMessage && message.text === '' ? 'whitespace-pre-line' : ''
+                                    }`}
+                                    dangerouslySetInnerHTML={{ __html: message.sender === 'bot' && typingMessage && message.text === '' ? typingMessage : message.text }}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                    <div className="flex flex-row items-center p-2 rounded-lg">
+                        <input
+                            type="text"
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            className="w-full flex-1 p-2 rounded-lg border border-gray-600 bg-gray-900 text-white mr-2"
+                            placeholder="Type your message..."
+                            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                        />
+                        <button
+                            onClick={handleSend}
+                            className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                        >
+                            Send
+                        </button>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     );

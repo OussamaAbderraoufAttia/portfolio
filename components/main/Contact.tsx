@@ -108,16 +108,16 @@ const Contact: React.FC = () => {
 
   return (
     <footer className="w-full bg-none p-2 text-white">
-      <div className="flex flex-col justify-center items-center relative z-0">
-        <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
+      <div className="flex flex-col justify-center items-center relative ">
+        <h3 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
           Contact me
         </h3>
         
-        <div className="w-full flex flex-col justify-start px-2">
+        <div className="w-full flex flex-col justify-start px-2 mt-8">
           <div className="w-full flex flex-col md:flex-row gap-4">
             <div className="w-full md:w-1/2">
               <p className="mb-2 text-xs mb-4">Feel free to get in touch with me via email or through the form below.</p>
-              <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-2">
+              <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8">
                 <InputField
                   label="Your Name"
                   name="name"
@@ -161,7 +161,7 @@ const Contact: React.FC = () => {
               </form>
             </div>
             <div className="md:w-1/2 flex items-center justify-center">
-              <div className=" rounded-lg shadow-lg p-2">
+              <div className=" rounded-lg shadow-lg p-8">
                 <Location />
                 <SocialMedia />
               </div>

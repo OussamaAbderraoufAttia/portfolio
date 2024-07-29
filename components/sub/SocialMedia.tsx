@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa6';
-import Button from '@/components/sub/Button';
-import Card from '@/components/sub/Card';
 import socials from '@/constants/index';
 
 // Define the type for a social media entry
@@ -14,28 +12,19 @@ interface Social {
 
 const SocialMedia: React.FC = () => {
   return (
-    <Card 
-    className="flex  flex-col relative mt-8 w-full h-28  justify-center gap-6 p-8"
-    style={{
-        backgroundColor: 'rgba(17, 24, 39, 0.5)', 
-        zIndex: 10
-    }}
+    <div
+      className="flex flex-col items-center justify-center w-full h-auto border-gray-600 gap-4 mt-8 p-8"
+      style={{
+        backgroundColor: 'rgba(17, 24, 39, 0.5)',
+        zIndex: 10,
+        borderRadius: '12px'
+      }}
     >
-      <h2 className="text-2xl font-semibold max-md:text-center">
-        Have an interesting project in mind? 👋
+      <h2 className="text-2xl font-semibold text-center">
+        Do not hesitate to check my socials
       </h2>
-      <div className="inline-flex flex-col items-center gap-6 lg:flex-row">
-        <Button
-          as={Link}
-          className="cancel-drag px-4 py-2"
-          href="mailto:maulanaajk@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaArrowRight className="-rotate-45 transition-transform duration-300 group-hover:rotate-0" />
-          Contact Me
-        </Button>
-        <div className="inline-flex gap-6">
+      <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-center">
+        <div className="flex gap-6">
           {socials.map((social: Social) => (
             <Link
               key={social.name}
@@ -45,12 +34,12 @@ const SocialMedia: React.FC = () => {
               target="_blank"
               rel="noreferrer"
             >
-              {<social.icon size="1.3rem" />}
+              {<social.icon size="1.9rem" />}
             </Link>
           ))}
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 

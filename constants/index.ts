@@ -83,7 +83,7 @@ export const Socials = [
   },
   {
     name: "Discord",
-    src: "/discord.svg",
+    src: "/linkedin.svg",
     link: "https://discord.gg/963VBZUvCb",
   },
 ];
@@ -374,6 +374,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaYoutube,
+  FaMedium,
 } from 'react-icons/fa6';
 
 interface Socials {
@@ -385,29 +386,30 @@ interface Socials {
 const socials: Socials[] = [
   {
       name: 'Facebook',
-      url: 'https://facebook.com/maulism',
+      url: 'https://www.facebook.com/john.loyde.77/',
       icon: FaFacebook,
   },
   {
       name: 'Instagram',
-      url: 'https://instagram.com/maulaanaahmad',
+      url: 'https://www.instagram.com/ooouussaammaaa/',
       icon: FaInstagram,
   },
   {
       name: 'Github',
-      url: 'https://github.com/bymaul/',
+      url: 'https://github.com/OussamaAbderraoufAttia',
       icon: FaGithub,
   },
   {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/maulana-ahmad',
+      url: 'https://www.linkedin.com/in/oussama-abderraouf-attia-494b32225/',
       icon: FaLinkedin,
   },
   {
-      name: 'YouTube',
-      url: 'https://youtube.com/@maulx',
-      icon: FaYoutube,
+      name: 'Medium',
+      url: 'https://medium.com/@lo_attia',
+      icon: FaMedium,
   },
+  
 ];
 
 export default socials;

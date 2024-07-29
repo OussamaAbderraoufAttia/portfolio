@@ -4,7 +4,6 @@ import Skills from "@/components/main/Skills";
 import Projects from "@/components/main/Projects";
 import Experience from "@/components/main/Experience";
 import Testimonials from "@/components/main/Testimonials";
-import Contact from "@/components/main/Contact";
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
