@@ -1,13 +1,8 @@
+"use client";
+
 import React from "react";
-import {
-  RxDiscordLogo,
-  RxGithubLogo,
-  RxInstagramLogo,
-  RxTwitterLogo,
-} from "react-icons/rx";
 //import the contact component
-import Contact from "./Contact";
-import { FaDiscord, FaLinkedin, FaMailBulk, FaYoutube } from "react-icons/fa";
+import Contact from "../sub/Contact";
 
 const Footer: React.FC = () => {
   return (

@@ -2,10 +2,18 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { testimonials } from '@/constants';
 
+interface Testimonial {
+  photo: string;
+  fullName: string;
+  role: string;
+  testimonial: string;
+}
+
 const Testimonials: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
@@ -38,10 +46,12 @@ const Testimonials: React.FC = () => {
           className="relative bg-gray-800 bg-opacity-80 rounded-lg p-6 shadow-lg"
         >
           <div className="flex items-center mb-4">
-            <img
+            <Image
               src={testimonials[currentIndex]?.photo || '/placeholder.jpg'}
               alt={testimonials[currentIndex]?.fullName || 'Testimonial'}
-              className="w-16 h-16 rounded-full object-cover"
+              width={64} // Adjust width as needed
+              height={64} // Adjust height as needed
+              className="rounded-full object-cover"
             />
             <div className="ml-4">
               <div className="text-xl font-semibold text-white">

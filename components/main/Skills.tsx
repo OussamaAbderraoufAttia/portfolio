@@ -1,8 +1,8 @@
+"use client";
 import {
   Backend_skill,
   Frontend_skill,
   Tools,
-  Other_skill,
   Language,
   Database,
 } from "@/constants";

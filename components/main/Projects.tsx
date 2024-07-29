@@ -1,16 +1,18 @@
+"use client";
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
 
 const Projects = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center py-8" // Reduced padding
+      className="flex flex-col items-center justify-center py-8" // Reduced padding for a more compact look
       id="projects"
     >
       <h1 className="text-[36px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-4"> {/* Reduced heading padding */}
         My Projects
       </h1>
-      <div className="flex flex-wrap justify-center gap-6 w-full px-6"> {/* Reduced gap and padding */}
+      <div className="flex flex-wrap justify-center gap-6 w-full px-6"> {/* Adjusted gap and padding */}
+        {/* ProjectCard components should adapt to the space available */}
         <ProjectCard
           src="/portfolioBackground.jpg"
           title="My FIRST ever Personal Portfolio"
@@ -38,7 +40,7 @@ const Projects = () => {
         <ProjectCard
           src="/EcommerceApp.png"
           title="Ecommerce App"
-          description="full-stack eCommerce app using Flutter & Firebase made with Flutter, Dart, and Firebase."
+          description="Full-stack eCommerce app using Flutter & Firebase made with Flutter, Dart, and Firebase."
           sourceLink="https://github.com/OussamaAbderraoufAttia/ecommerce_app"
         />
       </div>

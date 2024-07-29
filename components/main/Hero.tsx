@@ -1,10 +1,9 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import HeroContent from "../sub/HeroContent";
 import { motion } from "framer-motion";
-
-// Utility function for detecting mobile devices
-const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
+import { isMobile } from "@/utils/isMobile";
 
 // Animation variants for the video
 const videoVariants = {
@@ -43,6 +42,8 @@ const DesktopHero = () => (
         className="h-full w-full object-cover"
       >
         <source src="/blackhole.webm" type="video/webm" />
+        {/* Fallback text in case the video fails to load */}
+        Your browser does not support the video tag.
       </video>
     </motion.div>
     <div className="relative z-20 flex flex-col items-center justify-center h-full w-full">
@@ -53,17 +54,13 @@ const DesktopHero = () => (
 
 // Main Hero component
 const Hero = () => {
-  const [isMobileDevice, setIsMobileDevice] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false);
 
   useEffect(() => {
     setIsMobileDevice(isMobile());
   }, []);
 
-  return (
-    <>
-      {isMobileDevice ? <MobileHero /> : <DesktopHero />}
-    </>
-  );
+  return isMobileDevice ? <MobileHero /> : <DesktopHero />;
 };
 
 export default Hero;

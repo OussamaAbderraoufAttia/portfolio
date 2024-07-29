@@ -4,7 +4,7 @@ import Image from "next/image";
 import OussamaImage from "../../public/Oussama.jpg";
 import closeIcon from "../../public/X.svg";
 import menuIcon from "../../public/menu.svg";
-import { Socials } from "@/constants"; // Adjust the path based on your project structure
+import { Socials } from "@/constants"; // Ensure this path is correct
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,6 +85,7 @@ const Navbar = () => {
               key={social.name}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
               <Image
                 src={social.src}
@@ -100,13 +101,14 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="block md:hidden">
           <button
+            aria-label={isOpen ? "Close menu" : "Open menu"}
             className="text-white focus:outline-none w-8 h-8 flex items-center justify-center rounded-lg"
             onClick={toggleMenu}
           >
             {isOpen ? (
-              <Image src={closeIcon} alt="close" width={20} height={20} />
+              <Image src={closeIcon} alt="Close menu" width={20} height={20} />
             ) : (
-              <Image src={menuIcon} alt="menu" width={20} height={20} />
+              <Image src={menuIcon} alt="Open menu" width={20} height={20} />
             )}
           </button>
         </div>
