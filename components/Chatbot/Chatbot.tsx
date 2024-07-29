@@ -86,7 +86,10 @@ const Chatbot: React.FC = () => {
     }, [messages]);
 
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen p-4 py-0">
+        <div
+         className="flex flex-col justify-center items-center min-h-screen p-4 py-0"
+         id= "Smart-Assistant"
+         >
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}

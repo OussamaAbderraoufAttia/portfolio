@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full fixed top-0 bg-[#03001418] backdrop-blur-md z-50 px-4 shadow-[0_10px_30px_rgba(42,14,97,0.5)]">
-      <div className="w-full h-[50px] flex items-center justify-between m-auto px-4">
+      <div className="w-full h-[60px] flex items-center justify-between m-auto px-4">
         {/* Mobile Toggle Button */}
         <div className="flex items-center md:hidden">
           <a href="#about-me" className="flex items-center">
@@ -28,7 +28,7 @@ const Navbar = () => {
                 className="rounded-full"
               />
             </div>
-            <span className="font-bold ml-2 text-white text-sm">Oussama</span>
+            <span className="font-bold ml-2 text-white text-xs">Oussama</span>
           </a>
         </div>
 
@@ -43,31 +43,42 @@ const Navbar = () => {
               className="rounded-full"
             />
           </div>
-          <span className="font-bold ml-2 text-white text-sm hidden md:block">
+          <span className="font-bold ml-2 text-white text-xs hidden md:block">
             Oussama Abderraouf ATTIA
           </span>
         </a>
 
         {/* Centered Menu Links */}
         <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center h-full">
-          <div className="flex items-center justify-center w-auto h-auto border border-[#7042f861] bg-[#0300145e] px-4 py-2 rounded-full text-white text-sm">
-            <a href="#about-me" className="cursor-pointer nav-link mx-4">
+          <div className="flex items-center justify-center border border-[#7042f861] bg-[#0300145e] px-4 py-1 rounded-full text-white text-xs">
+            <a href="#about-me" className="cursor-pointer nav-link mx-2">
               About me
             </a>
-            <a href="#skills" className="cursor-pointer nav-link mx-4">
+            <span className="text-white mx-1">|</span>
+            <a href="#skills" className="cursor-pointer nav-link mx-2">
               Skills
             </a>
-            <a href="#projects" className="cursor-pointer nav-link mx-4">
+            <span className="text-white mx-1">|</span>
+            <a href="#projects" className="cursor-pointer nav-link mx-2">
               Projects
             </a>
-            <a href="#Experience" className="cursor-pointer nav-link mx-4">
+            <span className="text-white mx-1">|</span>
+            <a href="#Experience" className="cursor-pointer nav-link mx-2">
               Experience
+            </a>
+            <span className="text-white mx-1">|</span>
+            <a href="#Smart-Assistant" className="cursor-pointer nav-link mx-2">
+              Smart Assistant
+            </a>
+            <span className="text-white mx-1">|</span>
+            <a href="#Contact-me" className="cursor-pointer nav-link mx-2">
+              Contact me
             </a>
           </div>
         </div>
 
         {/* Desktop Social Icons */}
-        <div className="hidden md:flex flex-row gap-3">
+        <div className="hidden md:flex flex-row gap-2">
           {Socials.map((social) => (
             <a
               href={social.link}
@@ -106,30 +117,42 @@ const Navbar = () => {
         <div className="md:hidden bg-[#0300145e] mt-2 py-2 px-4 rounded-lg space-y-2">
           <a
             href="#about-me"
-            className="block text-white font-bold hover:opacity-50"
+            className="block text-white font-bold text-xs hover:opacity-50"
           >
             About me
           </a>
           <a
             href="#skills"
-            className="block text-white font-bold hover:opacity-50"
+            className="block text-white font-bold text-xs hover:opacity-50"
           >
             Skills
           </a>
           <a
             href="#projects"
-            className="block text-white font-bold hover:opacity-50"
+            className="block text-white font-bold text-xs hover:opacity-50"
           >
             Projects
           </a>
           <a
             href="#Experience"
-            className="block text-white font-bold hover:opacity-50"
+            className="block text-white font-bold text-xs hover:opacity-50"
           >
             Experience
           </a>
+          <a
+            href="#Smart-Assistant"
+            className="block text-white font-bold text-xs hover:opacity-50"
+          >
+            Smart Assistant
+          </a>
+          <a
+            href="#Contact-me"
+            className="block text-white font-bold text-xs hover:opacity-50"
+          >
+            Contact me
+          </a>
           {/* Social Icons for Mobile */}
-          <div className="flex flex-row gap-2 md:hidden">
+          <div className="flex flex-row gap-2">
             {Socials.map((social) => (
               <a
                 href={social.link}

@@ -14,7 +14,10 @@ const videoVariants = {
 
 // Component for mobile view
 const MobileHero = () => (
-  <div className="relative flex flex-col h-full w-full">
+  <div 
+    className="relative flex flex-col h-full w-full"
+    id="about-me"
+  >
     <div className="relative z-20 flex flex-col items-center justify-center h-full w-full">
       <HeroContent />
     </div>
@@ -23,7 +26,10 @@ const MobileHero = () => (
 
 // Component for desktop view
 const DesktopHero = () => (
-  <div className="relative flex flex-col h-full w-full">
+  <div 
+    className="relative flex flex-col h-full w-full"
+    id="about-me"
+  >
     <motion.div
       className="absolute top-[-340px] left-0 h-full w-full z-10"
       variants={videoVariants}

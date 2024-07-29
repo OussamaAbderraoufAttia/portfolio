@@ -104,7 +104,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <footer className="w-full bg-none p-2 text-white">
+    <footer 
+        className="w-full bg-none p-2 text-white"
+        id="Contact-me"
+    >
       <div>
         <h3 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
           Contact me
