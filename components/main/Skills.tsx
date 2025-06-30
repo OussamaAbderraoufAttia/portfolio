@@ -14,71 +14,81 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-1 h-full relative overflow-hidden pb-0 py-6" // Further reduced padding and gap
-      style={{ transform: "scale(0.8)", transformOrigin: "top" }} // Adjusted scaling
+      className="flex flex-col items-center justify-center gap-0 h-full relative overflow-hidden py-4"
     >
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center"> {/* Further reduced margin-top and gap */}
+      {/* Language Skills */}
+      <div className="flex flex-row justify-around flex-wrap mt-0 gap-1 items-center">
         {Language.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
-            width={image.width}
-            height={image.height}
+            width={image.width * 0.7}
+            height={image.height * 0.7}
             index={index}
+            className="w-12 h-12 md:w-16 md:h-16"
           />
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center">
+      {/* Backend Skills */}
+      <div className="flex flex-row justify-around flex-wrap mt-0 gap-1 items-center">
         {Backend_skill.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
-            width={image.width}
-            height={image.height}
+            width={image.width * 0.7}
+            height={image.height * 0.7}
             index={index}
+            className="w-12 h-12 md:w-16 md:h-16"
           />
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center">
+      {/* Frontend Skills */}
+      <div className="flex flex-row justify-around flex-wrap mt-0 gap-1 items-center">
         {Frontend_skill.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
-            width={image.width}
-            height={image.height}
+            width={image.width * 0.7}
+            height={image.height * 0.7}
             index={index}
+            className="w-12 h-12 md:w-16 md:h-16"
           />
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center">
+      {/* Tools */}
+      <div className="flex flex-row justify-around flex-wrap mt-0 gap-1 items-center">
         {Tools.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
-            width={image.width}
-            height={image.height}
+            width={image.width * 0.7}
+            height={image.height * 0.7}
             index={index}
+            className="w-12 h-12 md:w-16 md:h-16"
           />
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-1 gap-2 items-center">
+      {/* Database */}
+      <div className="flex flex-row justify-around flex-wrap mt-0 gap-1 items-center mb-2">
         {Database.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
-            width={image.width}
-            height={image.height}
+            width={image.width * 0.7}
+            height={image.height * 0.7}
             index={index}
+            className="w-12 h-12 md:w-16 md:h-16"
           />
         ))}
       </div>
 
+      {/* Full-width background video */}
       <div className="w-full h-full absolute">
         <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
           <video

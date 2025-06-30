@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FaDownload, FaLinkedin, FaMailBulk, FaGithub } from "react-icons/fa";
+import { FaDownload, FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
@@ -44,10 +44,9 @@ const HeroContent: React.FC = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col md:flex-row items-center justify-center px-5 md:px-20 mt-20 md:mt-40 w-full z-[20] overflow-hidden"
-      style={{ transform: "scale(0.75)", transformOrigin: "top" }} // Scaling effect
+      className="flex flex-col md:flex-row items-center justify-center px-5 md:px-10 mt-20 md:mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start md:mr-20">
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start md:mr-10">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -58,16 +57,16 @@ const HeroContent: React.FC = () => {
             initial="hidden"
             animate="visible"
             variants={slideInFromTop}
-            className="text-4xl font-bold text-white"
+            className="text-3xl md:text-4xl font-bold text-white"
           >
-            Hi, I&apos;m <span className="text-[#915EFF]">Oussama</span>
+            Hi, I'm <span className="text-[#915EFF]">Oussama</span>
           </motion.h1>
 
           <motion.p
             initial="hidden"
             animate="visible"
             variants={slideInFromTop}
-            className="text-lg mt-2 text-white"
+            className="text-base md:text-lg mt-2 text-white"
           >
             I do{" "}
             <Typewriter
@@ -86,21 +85,21 @@ const HeroContent: React.FC = () => {
           initial="hidden"
           animate="visible"
           variants={slideInFromTop}
-          className="flex flex-col items-start gap-5 mt-6"
+          className="flex flex-col items-start gap-5 mt-6 w-full"
         >
           <motion.div
             variants={slideInFromTop}
-            className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+            className="Welcome-box py-[6px] px-[6px] border border-[#7042f88b] opacity-[0.9]"
           >
-            <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-            <h1 className="Welcome-text text-[15px] md:text-[20px] font-semibold">
+            <SparklesIcon className="text-[#b49bff] mr-[8px] h-4 w-4" />
+            <h1 className="Welcome-text text-[13px] md:text-[18px] font-semibold">
               Oussama Abderraouf ATTIA
             </h1>
           </motion.div>
 
           <motion.div
             variants={slideInFromLeft(0.5)}
-            className="flex flex-col gap-6 text-2xl md:text-4xl font-bold text-white max-w-[600px] w-auto"
+            className="flex flex-col gap-4 text-xl md:text-3xl font-bold text-white w-full"
           >
             <span>
               I put
@@ -113,57 +112,62 @@ const HeroContent: React.FC = () => {
           </motion.div>
 
           <motion.div
-            className="p-4 w-full max-w-[900px] h-auto flex flex-col gap-5 rounded-lg"
+            className="p-6 w-full max-w-[1600px] h-auto flex flex-col gap-4 rounded-lg bg-gray-800 bg-opacity-80"
+            variants={slideInFromLeft(0.8)}
             style={{
               zIndex: 10,
-              backgroundColor: 'rgba(31, 41, 55, 0.8)',
-              borderRadius: '12px', // Adjust the border-radius as needed
+              borderRadius: '12px',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
             }}
           >
             <motion.p
-              variants={slideInFromLeft(0.8)}
-              className="text-lg text-gray-400 my-5 max-w-[600px]"
+              className="text-base text-gray-300 my-1 max-w-full leading-relaxed"
             >
-              I&apos;m a Computer Science student at 
-              ESI (The Higher National School of Computer Science Algiers) 
-              and multilingual speaker with a passion for artificial intelligence, 
-              and neural language processing, computer vision and UX/UI Design 
-              I am looking to join a company that values innovation, collaboration, 
-              and continuous learning and am confident that my enthusiasm and drive will 
-              help me succeed in any role that leverages my passion for technology.
+              I'm Oussama, a Computer Science student at ESI (École Supérieure d'Informatique, Algiers), with a deep passion for artificial intelligence, natural language processing, computer vision, and user-centered design. Since beginning my tech journey in 2021, I've built a strong foundation through academic excellence and hands-on experience. 
+              <br /><br />
+              Beyond the classroom, I've explored advanced domains such as quantum computing, agentic AI, and knowledge-augmented techniques, like retrieval-augmented generation (RAG), to enhance model performance and contextual reasoning. I've also worked on freelance projects, which have sharpened my ability to build practical, user-focused solutions.
+              <br /><br />
+              As a multilingual communicator, I value collaboration, innovation, and continuous learning. I'm eager to contribute to a forward-thinking team where I can apply my skills, grow professionally, and drive meaningful impact through technology.
             </motion.p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-row md:flex-row gap-3 mt-3">
+              {/* Resume Button - Shows icon only on mobile, icon+text on desktop */}
               <motion.a
                 variants={slideInFromLeft(1)}
-                className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[150px]"
+                className="p-2 md:p-2.5 button-primary text-center text-white cursor-pointer rounded-lg flex-1 md:flex-1 flex items-center justify-center gap-1 md:gap-2 transition-all duration-200 hover:bg-opacity-80 min-w-[40px]"
                 href="https://drive.google.com/file/d/1WeHR-sPqeZHGi3y1qQy-EFfdDWj6-o8W"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Resume"
               >
-                <FaDownload className="h-4 w-4 inline" />
-                &nbsp;Resume
+                <FaFileAlt className="h-4 w-4 md:h-3.5 md:w-3.5" />
+                <span className="hidden md:inline text-sm md:text-base">Resume</span>
               </motion.a>
               
+              {/* LinkedIn Button - Shows icon only on mobile, icon+text on desktop */}
               <motion.a
-                variants={slideInFromLeft(1.4)}
-                className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[150px]"
+                variants={slideInFromLeft(1.2)}
+                className="p-2 md:p-2.5 button-primary text-center text-white cursor-pointer rounded-lg flex-1 md:flex-1 flex items-center justify-center gap-1 md:gap-2 transition-all duration-200 hover:bg-opacity-80 min-w-[40px]"
                 href="https://www.linkedin.com/in/oussama-abderraouf-attia-494b32225/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                <FaLinkedin className="h-4 w-4 inline" />
-                &nbsp;LinkedIn
+                <FaLinkedin className="h-4 w-4 md:h-3.5 md:w-3.5" />
+                <span className="hidden md:inline text-sm md:text-base">LinkedIn</span>
               </motion.a>
+              
+              {/* GitHub Button - Shows icon only on mobile, icon+text on desktop */}
               <motion.a
-                variants={slideInFromLeft(1.6)}
-                className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[150px]"
+                variants={slideInFromLeft(1.4)}
+                className="p-2 md:p-2.5 button-primary text-center text-white cursor-pointer rounded-lg flex-1 md:flex-1 flex items-center justify-center gap-1 md:gap-2 transition-all duration-200 hover:bg-opacity-80 min-w-[40px]"
                 href="https://github.com/OussamaAbderraoufAttia"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
-                <FaGithub className="h-4 w-4 inline" />
-                &nbsp;GitHub
+                <FaGithub className="h-4 w-4 md:h-3.5 md:w-3.5" />
+                <span className="hidden md:inline text-sm md:text-base">GitHub</span>
               </motion.a>
             </div>
           </motion.div>
@@ -172,7 +176,7 @@ const HeroContent: React.FC = () => {
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center mt-10 md:mt-0 md:ml-20" // Added margin to the left of the image
+        className="hidden md:flex w-full h-full justify-center items-center mt-10 md:mt-0 md:ml-10"
       >
         <Image
           src="/mainIconsdark.svg"

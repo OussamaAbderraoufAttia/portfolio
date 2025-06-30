@@ -419,3 +419,73 @@ const socials: Socials[] = [
 ];
 
 export default socials;
+
+
+
+
+
+export interface UXUIProject {
+  title: string;
+  description: string;
+  coverImage: string; // local path to image or Behance thumbnail
+  behanceUrl: string;
+  tools?: string[];
+  year?: number;
+}
+
+export const uxuiProjects: UXUIProject[] = [
+  {
+    title: "DHCP DZ – Landing Page UI",
+    description:
+      "A modern and professional landing page for DHCP DZ, designed to highlight services and streamline contact flow with a clean, tech-focused aesthetic.",
+    coverImage: "/images/DHCP Website - Overview.png",
+    behanceUrl: "https://www.behance.net/gallery/229255127/DHCP-DZ-Landing-Page-UI",
+    tools: ["Figma"],
+    year: 2025,
+  },
+  {
+    title: "GHack – Landing Page UI",
+    description:
+      "A landing page for GHack Algiers, an event organized by GDG Algiers in early 2024, designed to inform visitors, answer questions, and provide a registration form.",
+    coverImage: "/images/Ghack.png",
+    behanceUrl: "https://www.behance.net/gallery/229254851/GHack-Website-UI",
+    tools: ["Figma", "Blender"],
+    year: 2024,
+  },
+  {
+    title: "PuterJS Claude – Visual Identity",
+    description:
+      "A visual identity exploration for a side project, featuring logo design, color system, and export guidelines. The VI was originally built using Next.js, aligning design with front-end needs.",
+    coverImage: "/images/PuterJS.png",
+    behanceUrl: "https://www.behance.net/gallery/229254501/PuterJS-Claude-VI",
+    tools: ["Figma", "Next.js"],
+    year: 2025,
+  },
+  {
+    title: "Doc Talents – Web Design UI",
+    description:
+      "User interface design for a registration management system for doctoral students, tailored to support the MERN stack implementation with a clean, intuitive layout.",
+    coverImage: "/images/Doc Talents.png",
+    behanceUrl: "https://www.behance.net/gallery/229254059/Doc-Talents",
+    tools: ["Figma"],
+    year: 2023,
+  },
+  {
+    title: "EsiGPT – AI Chat UI",
+    description:
+      "An AI assistant designed by ESI students for ESI students, offering smart search across ESI Trésor and the ability to answer questions on indexed documents.",
+    coverImage: "/images/EsiGPT.png",
+    behanceUrl: "https://www.behance.net/gallery/229253647/EsiGPT",
+    tools: ["Figma"],
+    year: 2025,
+  },
+  {
+    title: "Dr. Manager – Medical Dashboard UI",
+    description:
+      "A dashboard interface designed for managing doctor appointments, patient records, and smart diagnostics using AI, developed during TC - ETIC 2024.",
+    coverImage: "/images/Dr manager.png",
+    behanceUrl: "https://www.behance.net/gallery/229253409/Dr-Manager",
+    tools: ["Figma"],
+    year: 2024,
+  },
+];
