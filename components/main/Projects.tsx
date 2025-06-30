@@ -55,6 +55,7 @@ const Projects = () => {
                 title={project.title}
                 description={project.description}
                 sourceLink={project.sourceLink}
+                liveDemo={project.liveDemo}
               />
             ))
           : uxuiProjects.map((project, index) => (

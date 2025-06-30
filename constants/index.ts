@@ -526,7 +526,9 @@ export interface WebProject {
   title: string;
   description: string;
   sourceLink: string;
+  liveDemo?: string; // optional live demo link
 }
+
 
 export const webProjects: WebProject[] = [
   {
@@ -571,6 +573,7 @@ export const webProjects: WebProject[] = [
     description:
       "A modern landing page designed and developed for DHCP DZ to present its mission, services, and contact flow with clean UI and responsive design.",
     sourceLink: "https://github.com/OussamaAbderraoufAttia/dhcp-dz",
+    liveDemo: "https://dhcp-dz.vercel.app/",
   },
   {
     src: "/PuterJSOverview.png",
@@ -578,6 +581,6 @@ export const webProjects: WebProject[] = [
     description:
       "A design-first identity system for a side project built with Next.js, including logo, colors, and export-ready assets directly from code components.",
     sourceLink: "https://github.com/OussamaAbderraoufAttia/puterjs-claude",
+    liveDemo: "https://puterjs-claude.vercel.app/",
   },
 ];
-

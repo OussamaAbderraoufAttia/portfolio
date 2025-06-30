@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { generateResponse } from './chatbotService';
-import Image from 'next/image'; // Importing the Next.js Image component
+import Image from 'next/image';
 
 type Message = {
     sender: 'user' | 'bot';
@@ -20,7 +20,6 @@ const Chatbot: React.FC = () => {
     const formatMessage = (message: string) => {
         let formattedMessage = message.replace(/\n/g, '<br />');
         formattedMessage = formattedMessage.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        // Handle <img> tags in messages and replace them with <Image />
         formattedMessage = formattedMessage.replace(/<img src="(.*?)" alt="(.*?)" \/>/g, (match, src, alt) => {
             return `<div style="width: 100%; height: auto;"><Image src="${src}" alt="${alt}" width={500} height={300} /></div>`;
         });
@@ -87,20 +86,22 @@ const Chatbot: React.FC = () => {
 
     return (
         <div
-         className="flex flex-col justify-center items-center min-h-screen p-4 py-0"
-         id= "Smart-Assistant"
-         >
+            className="flex flex-col justify-center items-center h-auto p-4 mt-0 mb-0 "
+            id="Smart-Assistant"
+        >
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 text-center"
+                className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center py-10"
             >
                 Smart Assistant
             </motion.h1>
-            <div className='w-full max-w-4xl flex flex-row justify-center'>
-                <div className="w-full max-w-4xl p-4 border rounded-lg shadow-lg text-white"
-                    style={{ backgroundColor: 'rgba(31, 41, 55, 0.2)', zIndex: 10 }}>
+            <div className="w-full max-w-4xl flex flex-row justify-center">
+                <div
+                    className="w-full max-w-4xl p-4 border rounded-lg shadow-lg text-white"
+                    style={{ backgroundColor: 'rgba(31, 41, 55, 0.2)', zIndex: 10 }}
+                >
                     <div
                         ref={chatContainerRef}
                         className="chat-container min-h-32 max-h-96 overflow-y-auto p-4 border border-gray-600 rounded-lg mb-4 bg-gray-900"
@@ -109,10 +110,11 @@ const Chatbot: React.FC = () => {
                             zIndex: 10
                         }}
                     >
-                        <div className="mb-4 text-center text-gray-400"
+                        <div
+                            className="mb-4 text-center text-gray-400"
                             style={{ backgroundColor: 'rgba(17, 24, 39, 0.0)', zIndex: 10 }}
                         >
-                            Hi! I&apos;m Oussama. How can I assist you today?
+                            Hi! I'm Oussama. How can I assist you today?
                         </div>
                         {messages.map((message, index) => (
                             <div
@@ -120,10 +122,15 @@ const Chatbot: React.FC = () => {
                                 className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'} mb-2`}
                             >
                                 <div
-                                    className={`max-w-lg p-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'} ${
+                                    className={`max-w-lg p-2 rounded-lg ${
+                                        message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'
+                                    } ${
                                         message.sender === 'bot' && typingMessage && message.text === '' ? 'whitespace-pre-line' : ''
                                     }`}
-                                    dangerouslySetInnerHTML={{ __html: message.sender === 'bot' && typingMessage && message.text === '' ? typingMessage : message.text }}
+                                    dangerouslySetInnerHTML={{
+                                        __html:
+                                            message.sender === 'bot' && typingMessage && message.text === '' ? typingMessage : message.text
+                                    }}
                                 />
                             </div>
                         ))}

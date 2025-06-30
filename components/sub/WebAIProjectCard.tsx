@@ -10,6 +10,7 @@ interface Props {
   title: string;
   description: string;
   sourceLink: string;
+  liveDemo?: string; // Added optional liveDemo prop
 }
 
 const WebAIProjectCard = ({
@@ -17,6 +18,7 @@ const WebAIProjectCard = ({
   title,
   description,
   sourceLink,
+  liveDemo,
 }: Props) => {
   return (
     <motion.div
@@ -48,6 +50,18 @@ const WebAIProjectCard = ({
           >
             Source Code
           </motion.a>
+          {liveDemo && (
+            <motion.a
+              variants={slideInFromLeft(1.4)} // Slightly delayed animation for visual distinction
+              initial="hidden"
+              animate="visible"
+              href={liveDemo}
+              target="_blank"
+              className="p-1.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[160px]"
+            >
+              Live Demo
+            </motion.a>
+          )}
         </div>
       </div>
     </motion.div>
