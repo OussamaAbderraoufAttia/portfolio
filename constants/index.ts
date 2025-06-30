@@ -8,7 +8,8 @@ import DrManagerBackground from "../public/DrManagerBackground.png";
 import soai_logo from "../public/soai_logo.png";
 import gdg_logo from "../public/gdg_logo.png";
 import cse_logo from "../public/cse_logo.png";
-
+import DHCPWebsiteOverview from "../public/DHCP Website - Overview.png";
+import PuterJS from "../public/PuterJSOverview.png";
 import { IconType } from 'react-icons/lib';
 
 
@@ -193,6 +194,7 @@ export const Database = [
     height: 70,
   },
 ];
+
 export const Tools = [
   {
     skill_name: "git",
@@ -292,7 +294,33 @@ export const projects = [
     image: EcommerceApp,
     source_code_link: "https://github.com/OussamaAbderraoufAttia/ecommerce_app",
   },
-  
+  {
+  name: "DHCP DZ – Landing Page",
+  description:
+    "A modern landing page designed and developed for DHCP DZ to present its mission, services, and contact flow with clean UI and responsive design.",
+  tags: [
+    { name: "Next.js", color: "blue-text-gradient" },
+    { name: "Tailwind CSS", color: "green-text-gradient" },
+    { name: "Typescript", color: "pink-text-gradient" },
+    { name: "Fully designed and developed", color: "yellow-text-gradient" },
+  ],
+  image: DHCPWebsiteOverview, // import this from your assets or link it from /public if you're using a custom loader
+  source_code_link: "https://github.com/OussamaAbderraoufAttia/dhcp-dz",
+},
+{
+  name: "PuterJS Claude – Visual Identity",
+  description:
+    "A design-first identity system for a side project built with Next.js, including logo, colors, and export-ready assets directly from code components.",
+  tags: [
+    { name: "Figma", color: "blue-text-gradient" },
+    { name: "Next.js", color: "green-text-gradient" },
+    { name: "Design System", color: "pink-text-gradient" },
+    { name: "Branding & UI Identity", color: "yellow-text-gradient" },
+  ],
+  image: PuterJS, // as above, import or serve from public
+  source_code_link: "https://github.com/OussamaAbderraoufAttia/puterjs-claude",
+},
+
     
 ];
 
@@ -433,12 +461,12 @@ export interface UXUIProject {
   year?: number;
 }
 
-export const uxuiProjects: UXUIProject[] = [
+export  const uxuiProjects: UXUIProject[] = [
   {
     title: "DHCP DZ – Landing Page UI",
     description:
       "A modern and professional landing page for DHCP DZ, designed to highlight services and streamline contact flow with a clean, tech-focused aesthetic.",
-    coverImage: "/images/DHCP Website - Overview.png",
+    coverImage: "/DHCP Website - Overview.png",
     behanceUrl: "https://www.behance.net/gallery/229255127/DHCP-DZ-Landing-Page-UI",
     tools: ["Figma"],
     year: 2025,
@@ -447,7 +475,7 @@ export const uxuiProjects: UXUIProject[] = [
     title: "GHack – Landing Page UI",
     description:
       "A landing page for GHack Algiers, an event organized by GDG Algiers in early 2024, designed to inform visitors, answer questions, and provide a registration form.",
-    coverImage: "/images/Ghack.png",
+    coverImage: "/Ghack.png",
     behanceUrl: "https://www.behance.net/gallery/229254851/GHack-Website-UI",
     tools: ["Figma", "Blender"],
     year: 2024,
@@ -456,7 +484,7 @@ export const uxuiProjects: UXUIProject[] = [
     title: "PuterJS Claude – Visual Identity",
     description:
       "A visual identity exploration for a side project, featuring logo design, color system, and export guidelines. The VI was originally built using Next.js, aligning design with front-end needs.",
-    coverImage: "/images/PuterJS.png",
+    coverImage: "/PuterJS.png",
     behanceUrl: "https://www.behance.net/gallery/229254501/PuterJS-Claude-VI",
     tools: ["Figma", "Next.js"],
     year: 2025,
@@ -465,7 +493,7 @@ export const uxuiProjects: UXUIProject[] = [
     title: "Doc Talents – Web Design UI",
     description:
       "User interface design for a registration management system for doctoral students, tailored to support the MERN stack implementation with a clean, intuitive layout.",
-    coverImage: "/images/Doc Talents.png",
+    coverImage: "/Doc Talents.png",
     behanceUrl: "https://www.behance.net/gallery/229254059/Doc-Talents",
     tools: ["Figma"],
     year: 2023,
@@ -474,18 +502,82 @@ export const uxuiProjects: UXUIProject[] = [
     title: "EsiGPT – AI Chat UI",
     description:
       "An AI assistant designed by ESI students for ESI students, offering smart search across ESI Trésor and the ability to answer questions on indexed documents.",
-    coverImage: "/images/EsiGPT.png",
+    coverImage: "/EsiGPT.png",
     behanceUrl: "https://www.behance.net/gallery/229253647/EsiGPT",
     tools: ["Figma"],
-    year: 2025,
+    year: 2024,
   },
   {
     title: "Dr. Manager – Medical Dashboard UI",
     description:
       "A dashboard interface designed for managing doctor appointments, patient records, and smart diagnostics using AI, developed during TC - ETIC 2024.",
-    coverImage: "/images/Dr manager.png",
+    coverImage: "/Dr manager.png",
     behanceUrl: "https://www.behance.net/gallery/229253409/Dr-Manager",
     tools: ["Figma"],
     year: 2024,
   },
 ];
+
+
+
+
+export interface WebProject {
+  src: string;
+  title: string;
+  description: string;
+  sourceLink: string;
+}
+
+export const webProjects: WebProject[] = [
+  {
+    src: "/portfolioBackground.jpg",
+    title: "My FIRST ever Personal Portfolio",
+    description:
+      "This is my first ever personal portfolio website. It is built with Next.js, Tailwind CSS, and ReactJS.",
+    sourceLink: "https://github.com/OussamaAbderraoufAttia/Portfolio-Website",
+  },
+  {
+    src: "/DrManagerBackground.png",
+    title: "Dr.Manager - Binary Image Segmentation",
+    description:
+      "A fully designed and developed and deployed during TC - ETIC - 2024: Tracking Doctor's appointments and managing patient's data and doing smart diagnostic using AI.",
+    sourceLink: "https://github.com/OussamaAbderraoufAttia/bisbackend",
+  },
+  {
+    src: "/AlgeriaCoinClassification.png",
+    title: "Algeria Coin Classifier",
+    description:
+      "An image classification model designed to identify and categorize Algerian coins using convolutional neural networks. In the first of its own, this model classifies Algerian coins with an accuracy of 87.5%.",
+    sourceLink:
+      "https://github.com/OussamaAbderraoufAttia/AlgerianCoinClassifier",
+  },
+  {
+    src: "/DocScribe.png",
+    title: "Doc Talents Website",
+    description:
+      "A website that has been developed for the management of the registrations and the re-registrations of the doctoral students made with MERN Stack.",
+    sourceLink: "https://github.com/Imeneallouche/Doc-Talents-Website",
+  },
+  {
+    src: "/EcommerceApp.png",
+    title: "Ecommerce App",
+    description:
+      "Full-stack eCommerce app using Flutter & Firebase made with Flutter, Dart, and Firebase.",
+    sourceLink: "https://github.com/OussamaAbderraoufAttia/ecommerce_app",
+  },
+  {
+    src: "/DHCP Website - Overview.png",
+    title: "DHCP DZ – Landing Page",
+    description:
+      "A modern landing page designed and developed for DHCP DZ to present its mission, services, and contact flow with clean UI and responsive design.",
+    sourceLink: "https://github.com/OussamaAbderraoufAttia/dhcp-dz",
+  },
+  {
+    src: "/PuterJSOverview.png",
+    title: "PuterJS Claude – Visual Identity",
+    description:
+      "A design-first identity system for a side project built with Next.js, including logo, colors, and export-ready assets directly from code components.",
+    sourceLink: "https://github.com/OussamaAbderraoufAttia/puterjs-claude",
+  },
+];
+
